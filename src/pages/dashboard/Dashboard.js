@@ -72,12 +72,12 @@ export default function Dashboard() {
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    maxHeight="200"
+                    height="200"
                     image={Logo}
                     alt="document logo"
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h7" component="div">
+                    <Typography gutterBottom variant="h6" component="div">
                       {text}
                     </Typography>
                   </CardContent>
