@@ -15,7 +15,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import ControlPointIcon from '@mui/icons-material/ControlPoint';
 
 import ShowChartOutlinedIcon from '@mui/icons-material/ShowChartOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
@@ -57,12 +57,12 @@ export const SideNav = (props) => {
             </Toolbar>  
             <Divider />   
             <List>
-                {['Dashboard', 'Trash'].map((text, index) => (
+                {['Dashboard', 'Create'].map((text, index) => (
                 <ListItem key={text} disablePadding>
                     <ListItemButton button component={Link} to={"../"+text.toLowerCase()}>
                     <ListItemIcon>
                         {index % 2 === 0 ? <HomeOutlinedIcon style={{ color: 'white' }} /> : 
-                        <DeleteOutlineOutlinedIcon style={{ color: 'white' }} />}
+                        <ControlPointIcon style={{ color: 'white' }} />}
                     </ListItemIcon>
                     <ListItemText primary={text} style={{ color: 'white' }}/>
                     </ListItemButton>
