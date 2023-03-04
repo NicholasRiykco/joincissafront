@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { createTheme } from '@mui/material/styles';
-import Logo from '/Users/nicholaswidjaja/joincissa/my-app/src/images/Logo.png';
+import Logo from '/Users/nicholaswidjaja/joincissa2/joincissafront/src/images/Logo.png';
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 

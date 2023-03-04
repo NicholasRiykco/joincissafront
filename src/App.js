@@ -3,12 +3,13 @@ import logo from './logo.svg';
 import SignIn from './components/sign-in.js';
 import SignUp from './components/sign-up.js';
 import ResponsiveAppBar from './components/navbar';
-
+import Dashboard from './components/dashboard';
+import Dash from './components/side-nav';
 function App() {
   return (
     <div className="App">
-      <ResponsiveAppBar></ResponsiveAppBar>
-      <SignUp></SignUp>
+      <Dash></Dash>
+      
     </div>
   );
 }
