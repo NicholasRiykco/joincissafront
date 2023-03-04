@@ -82,101 +82,93 @@ export const SignupForm = (props) => {
   }, []);
 
   return (
-    <div className="body">
-      <div className="fix-padding"></div>
-      <div className="details-container">
-        <main className="details-main">
-          <div className="measure">
-            <h1 className="details-title">Sign Up</h1>
-            <form onBlur={formik.handleBlur} onSubmit={formik.handleSubmit}>
-              <div className="mt3">
-                <label className="black">First Name</label>
-                <input
-                  type="text"
-                  name="firstName"
-                  value={formik.values.firstName}
-                  onChange={formik.handleChange}
-                  className="input-box-container input-reset"
-                  placeholder="First Name"
-                />
-                {formik.errors.firstName && formik.touched.firstName && (
-                  <p className="input-error">{formik.errors.firstName}</p>
-                )}
-              </div>
-              <div className="mt3">
-                <label className="black">Last Name</label>
-                <input
-                  type="text"
-                  name="lastName"
-                  value={formik.values.lastName}
-                  onChange={formik.handleChange}
-                  className="input-box-container input-reset"
-                  placeholder="Last Name"
-                />
-                {formik.errors.lastName && formik.touched.lastName && (
-                  <p className="input-error">{formik.errors.lastName}</p>
-                )}
-              </div>
-
-              <div className="mt3">
-                <label className="black">Email</label>
-                <input
-                  type="text"
-                  name="email"
-                  value={formik.values.email}
-                  onChange={formik.handleChange}
-                  className="input-box-container input-reset"
-                  placeholder="Email"
-                />
-                {formik.errors.email && formik.touched.email && (
-                  <p className="input-error">{formik.errors.email}</p>
-                )}
-              </div>
-              <div className="mt3">
-                <label className="black">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  value={formik.values.password}
-                  onChange={formik.handleChange}
-                  className="input-box-container input-reset"
-                  placeholder="Password"
-                />
-                {formik.errors.password && formik.touched.password && (
-                  <p className="input-error">{formik.errors.password}</p>
-                )}
-              </div>
-              <div className="mv3">
-                <label className="black">Confirm Password</label>
-                <input
-                  type="password"
-                  name="confirmPassword"
-                  value={formik.values.confirmPassword}
-                  onChange={formik.handleChange}
-                  className="input-box-container input-reset"
-                  placeholder="Confirm Password"
-                />
-                {formik.errors.confirmPassword && formik.touched.confirmPassword && (
-                  <p className="input-error">{formik.errors.confirmPassword}</p>
-                )}
-              </div>
-              {error && <p className="input-error">{errorMessage}</p>}
-              <div>
-                <button type="submit" id="signup" className="solid-buttton">
-                  Sign Up
-                </button>
-                <br />
-                <div className="lh-copy mt3">
-                  <Link to={'/login'} id="login" className="details-footer">
-                    Already have an account?
-                  </Link>
-                </div>
-              </div>
-            </form>
-          </div>
-        </main>
+    <form onBlur={formik.handleBlur} onSubmit={formik.handleSubmit}>
+      <div className="mt3">
+        <label className="black">First Name</label>
+        <input
+          type="text"
+          name="firstName"
+          value={formik.values.firstName}
+          onChange={formik.handleChange}
+          className="input-box-container input-reset"
+          placeholder="First Name"
+        />
+        {formik.errors.firstName && formik.touched.firstName && (
+          <p className="input-error">{formik.errors.firstName}</p>
+        )}
       </div>
-    </div>
+      <div className="mt3">
+        <label className="black">Last Name</label>
+        <input
+          type="text"
+          name="lastName"
+          value={formik.values.lastName}
+          onChange={formik.handleChange}
+          className="input-box-container input-reset"
+          placeholder="Last Name"
+        />
+        {formik.errors.lastName && formik.touched.lastName && (
+          <p className="input-error">{formik.errors.lastName}</p>
+        )}
+      </div>
+
+      <div className="mt3">
+        <label className="black">Email</label>
+        <input
+          type="text"
+          name="email"
+          value={formik.values.email}
+          onChange={formik.handleChange}
+          className="input-box-container input-reset"
+          placeholder="Email"
+        />
+        {formik.errors.email && formik.touched.email && (
+          <p className="input-error">{formik.errors.email}</p>
+        )}
+      </div>
+      <div className="mt3">
+        <label className="black">Password</label>
+        <input
+          type="password"
+          name="password"
+          value={formik.values.password}
+          onChange={formik.handleChange}
+          className="input-box-container input-reset"
+          placeholder="Password"
+        />
+        {formik.errors.password && formik.touched.password && (
+          <p className="input-error">{formik.errors.password}</p>
+        )}
+      </div>
+      <div className="mv3">
+        <label className="black">Confirm Password</label>
+        <input
+          type="password"
+          name="confirmPassword"
+          value={formik.values.confirmPassword}
+          onChange={formik.handleChange}
+          className="input-box-container input-reset"
+          placeholder="Confirm Password"
+        />
+        {formik.errors.confirmPassword && formik.touched.confirmPassword && (
+          <p className="input-error">{formik.errors.confirmPassword}</p>
+        )}
+      </div>
+      {error && <p className="input-error">{errorMessage}</p>}
+      <div>
+        <button type="submit" id="signup" className="solid-buttton">
+          Sign Up
+        </button>
+        <br />
+        <div className="lh-copy mt3">
+          <Link to={'/login'} id="login" className="details-footer">
+            Already have an account?
+          </Link>
+        </div>
+      </div>
+    </form>
+
+
   );
 };
 
