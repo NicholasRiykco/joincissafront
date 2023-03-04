@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { FormContainer } from '../../components/formContainer/FormContainer';
 
-import {  SIGNUP } from '../../utils/constants';
+import {  VERIFICATION } from '../../utils/constants';
 
 
-export const Signup = (props) => {
+export const Verify = (props) => {
 
     return (
       <div>
-        <FormContainer type={SIGNUP} title={"Sign Up"}/>
+        <FormContainer type={VERIFICATION} title={"Enter code sent to your email"}/>
       </div>
     );
 

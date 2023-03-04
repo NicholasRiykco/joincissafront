@@ -39,6 +39,7 @@ export const LoginForm = (props) => {
             password: values.password,
           },
         });
+        console.log(res.data);
 
         localStorage.setItem('access_token', res.data.user.token);
         localStorage.setItem('userName', res.data.user.name.first);
@@ -47,7 +48,7 @@ export const LoginForm = (props) => {
         localStorage.setItem('userEmail', res.data.user.email);
         // cookie.save('access_token', res.data.user.token);
 
-        navigate('/gallery');
+        navigate('/dashboard');
       } catch (err) {
         setErrorMessage(err.response.data.message);
         setError(true);

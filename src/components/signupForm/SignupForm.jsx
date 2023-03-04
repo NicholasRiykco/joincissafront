@@ -69,7 +69,7 @@ export const SignupForm = (props) => {
 
         // setLoggedIn(true);
         // setUser(user);
-        navigate('/verify/email', { state: { values } });
+        navigate('/verify', { state: { values } });
       } catch (err) {
         setErrorMessage(err.message);
         setError(true);

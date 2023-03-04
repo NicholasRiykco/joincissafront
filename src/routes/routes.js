@@ -1,9 +1,10 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { SignupForm } from "../components/signupForm/SignupForm";
+
 import { Login } from "../pages/login/Login";
 import Dash from "../components/side-nav";
 import { Signup } from "../pages/signup/Signup";
+import { Verify } from "../pages/verify/Verify";
 
 const AppRoutes = () => (
   <BrowserRouter>
@@ -12,6 +13,7 @@ const AppRoutes = () => (
       <Route path="/login" element={<Login />} />
       {/* <Route path="/logout" element={<Welcome />} /> */}
       <Route path="/signup" element={<Signup />} />
+      <Route path="/verify" element={<Verify />} />
       <Route path="/dashboard" element={<Dash />} />
     </Routes>
   </BrowserRouter>
