@@ -5,7 +5,7 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import CssBaseline from '@mui/material/CssBaseline';
-
+import TextEditor from '../../components/textEditorComponents/components/QuillTextEditor';
 
 import {SideNav} from '../../components/sideNav/SideNav';
 
@@ -57,7 +57,7 @@ export default function Dashboard() {
         >
           <Toolbar />
           <Typography paragraph>
-            Insert Riykco's textbox
+            <TextEditor></TextEditor>
           </Typography>
         </Box> 
       </Box>
