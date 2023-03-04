@@ -70,7 +70,7 @@ export const LoginForm = (props) => {
 
     location?.state?.resetSuccess && notify();
 
-    document.title = 'HyperLink - Login';
+    document.title = 'DiverseAI - Login';
   }, []);
 
   return (

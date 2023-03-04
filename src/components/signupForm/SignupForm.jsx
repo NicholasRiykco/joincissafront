@@ -20,7 +20,6 @@ export const SignupForm = (props) => {
       lastName: '',
       email: '',
       password: '',
-      confirmPassword: '',
       occupation: '',
     },
     validationSchema: Yup.object({
@@ -50,9 +49,6 @@ export const SignupForm = (props) => {
           });
         }),
       password: Yup.string().min(8, 'Minimum 8 characters').required('You must enter a password'),
-      confirmPassword: Yup.string()
-        .oneOf([Yup.ref('password')], 'Password does not match')
-        .required('You must enter a password'),
     }),
     onSubmit: async (values) => {
       // alert(JSON.stringify(values, null, 2));
@@ -78,7 +74,7 @@ export const SignupForm = (props) => {
   });
 
   useEffect(() => {
-    document.title = 'HyperLink - Sign Up';
+    document.title = 'DiverseAI - Sign Up';
   }, []);
 
   return (

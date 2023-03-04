@@ -49,7 +49,7 @@ export const VerificationForm = (props) => {
   });
 
   useEffect(() => {
-    document.title = "HyperLink - Verify Email";
+    document.title = "DiverseAI - Verify Email";
   }, []);
 
   return (
