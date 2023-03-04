@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { LOGIN, SIGNUP, VERIFICATION } from '../../utils/constants';
 import { LoginForm } from '../logInForm/LoginForm';
 import { SignupForm } from '../signupForm/SignupForm';
+import { VerificationForm } from '../verificationForm/VerificationForm';
+
 
 export const FormContainer = ({type, title}) => {
   let form;
@@ -11,6 +13,8 @@ export const FormContainer = ({type, title}) => {
       form = < LoginForm />;
     } else if (type === SIGNUP) {
       form = < SignupForm />;
+    } else if (type === VERIFICATION){
+      form = < VerificationForm />;
     }
 
     return (
