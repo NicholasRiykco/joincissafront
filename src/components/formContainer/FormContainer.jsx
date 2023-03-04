@@ -5,6 +5,8 @@ import { LoginForm } from '../logInForm/LoginForm';
 import { SignupForm } from '../signupForm/SignupForm';
 import { VerificationForm } from '../verificationForm/VerificationForm';
 
+import blob1 from '../../images/Vector 7.png';
+import blob2 from '../../images/Vector 8.png';
 
 export const FormContainer = ({type, title}) => {
   let form;
@@ -27,8 +29,8 @@ export const FormContainer = ({type, title}) => {
           </div>
         </main>
       </div>
-      <img id="blob1" src="../../images/Vector 7.png"/>
-      <img id="blob2" src="../../images/Vector 8.png"/>
+      <img id="blob1" src={blob1}/>
+      <img id="blob2" src={blob2}/>
     </div>
 
     );
