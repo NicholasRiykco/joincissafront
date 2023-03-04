@@ -12,6 +12,8 @@ import CardMedia from '@mui/material/CardMedia';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
+import TextEditor from '../../components/textEditorComponents/components/QuillTextEditor';
+
 
 import {SideNav} from '../../components/sideNav/SideNav';
 import Logo from '../../images/test.jpg';

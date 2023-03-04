@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { SignupForm } from "../components/signupForm/SignupForm";
+import { SignupForm } from "./signupForm/SignupForm";
 import { Login } from "../pages/login/Login";
 import Dashboard from "../pages/dashboard/Dashboard";
 import { Signup } from "../pages/signup/Signup";
