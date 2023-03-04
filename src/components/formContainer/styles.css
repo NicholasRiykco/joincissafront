@@ -2,10 +2,14 @@
   font-family: 'Inter', sans-serif;
 }
 
+nav {
+  position: sticky;
+}
+
 #blob2 {
   position: absolute;
   right: 0;
-  bottom: 16em;
+  bottom: 13em;
   z-index: 0;
 }
 

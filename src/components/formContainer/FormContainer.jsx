@@ -7,6 +7,7 @@ import { VerificationForm } from '../verificationForm/VerificationForm';
 
 import blob1 from '../../images/Vector 7.png';
 import blob2 from '../../images/Vector 8.png';
+import LandingNavbar from '../landingNavbar/landing-navbar';
 
 export const FormContainer = ({type, title}) => {
   let form;
@@ -21,6 +22,7 @@ export const FormContainer = ({type, title}) => {
 
     return (
       <div className="body">
+      <LandingNavbar/>
       <div className="details-container">
         <main className="details-main">
           <div className="measure">
