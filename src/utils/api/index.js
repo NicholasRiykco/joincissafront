@@ -1,8 +1,9 @@
 const axios = require('axios');
-const URL = 'http://localhost:8080/GiveUsABreak_war_exploded'; 
+const URL = 'http://localhost:3050'; 
 
 export async function postReview(params) {
   const endpoint = URL + '/api/review';
+  console.log(params);
   const dataFetched = await axios({
     url: endpoint,
     method: 'POST',
