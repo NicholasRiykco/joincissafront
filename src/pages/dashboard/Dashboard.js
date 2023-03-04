@@ -6,8 +6,15 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import CssBaseline from '@mui/material/CssBaseline';
 
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import { Button, CardActionArea, CardActions } from '@mui/material';
+import Grid from '@mui/material/Grid';
+
 
 import {SideNav} from '../../components/sideNav/SideNav';
+import Logo from '../../images/test.jpg';
 
 const drawerWidth = 240;
 
@@ -56,9 +63,27 @@ export default function Dashboard() {
           sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
         >
           <Toolbar />
-          <Typography paragraph>
-            Insert Riykco's textbox
-          </Typography>
+          <Grid container spacing={2} direction="row" alignItems="center" >
+          {['Optiver', 'IMC Trading', 'Atlassian', 'Citadel', 'REA Group', 'ANZ', 'CommBank', 'NAB', 'Google'].map((text, index) => (
+            <Grid item xs={2}> 
+              <Card sx={{ maxWidth: "250px" }}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    maxHeight="200"
+                    image={Logo}
+                    alt="document logo"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h7" component="div">
+                      {text}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
+          ))}
+          </Grid>
         </Box> 
       </Box>
     </div>

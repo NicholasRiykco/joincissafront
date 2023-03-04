@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
+import Logo from '../../images/Logo.png';
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -48,11 +49,12 @@ export const SideNav = (props) => {
           open
         >
           <div>
-            <Toolbar />
-            <Divider />
+            <Toolbar>
+              <img src={Logo} alt="logo"/>
+            </Toolbar>     
             <List>
                 {['Dashboard', 'Trash'].map((text, index) => (
-                <ListItem key={text} disablePadding>
+                <ListItem key={text} >
                     <ListItemButton button component={Link} to={"../"+text.toLowerCase()}>
                     <ListItemIcon>
                         {index % 2 === 0 ? <HomeOutlinedIcon style={{ color: 'white' }} /> : 
@@ -66,7 +68,7 @@ export const SideNav = (props) => {
             <Divider />
             <List>
                 {['Analytics', 'Schedules', 'Style Guides', 'Premium'].map((text, index) => (
-                <ListItem key={text} disablePadding >
+                <ListItem key={text} >
                     <ListItemButton disabled = {true} button component={Link} to={"../"+text.toLowerCase()}> 
                     <ListItemIcon style={{ color: 'white' }}>
                         {index === 0 ? <ShowChartOutlinedIcon /> : 
@@ -79,9 +81,10 @@ export const SideNav = (props) => {
                 </ListItem>
                 ))}
             </List>
+            <Divider />
             <List style={{ position: "absolute", bottom: 0}}>
                 {['Help', 'Settings', 'Logout'].map((text, index) => (
-                <ListItem key={text} disablePadding>
+                <ListItem key={text}>
                     <ListItemButton disabled = {index === 2? false:true} button component={Link} to={"../"+text.toLowerCase()}> 
                     <ListItemIcon style={{ color: 'white' }}>
                         {index === 0 ? <HelpOutlineOutlinedIcon /> : 
