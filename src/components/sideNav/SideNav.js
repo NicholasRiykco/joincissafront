@@ -4,6 +4,8 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import Logo from '../../images/Logo.png';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -30,6 +32,7 @@ export const SideNav = (props) => {
 
   return (
     <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
@@ -50,11 +53,12 @@ export const SideNav = (props) => {
         >
           <div>
             <Toolbar>
-              <img src={Logo} alt="logo"/>
-            </Toolbar>     
+                <img src={Logo} alt="logo" width="140"/>  
+            </Toolbar>  
+            <Divider />   
             <List>
                 {['Dashboard', 'Trash'].map((text, index) => (
-                <ListItem key={text} >
+                <ListItem key={text} disablePadding>
                     <ListItemButton button component={Link} to={"../"+text.toLowerCase()}>
                     <ListItemIcon>
                         {index % 2 === 0 ? <HomeOutlinedIcon style={{ color: 'white' }} /> : 
@@ -68,7 +72,7 @@ export const SideNav = (props) => {
             <Divider />
             <List>
                 {['Analytics', 'Schedules', 'Style Guides', 'Premium'].map((text, index) => (
-                <ListItem key={text} >
+                <ListItem key={text} disablePadding>
                     <ListItemButton disabled = {true} button component={Link} to={"../"+text.toLowerCase()}> 
                     <ListItemIcon style={{ color: 'white' }}>
                         {index === 0 ? <ShowChartOutlinedIcon /> : 
@@ -84,7 +88,7 @@ export const SideNav = (props) => {
             <Divider />
             <List style={{ position: "absolute", bottom: 0}}>
                 {['Help', 'Settings', 'Logout'].map((text, index) => (
-                <ListItem key={text}>
+                <ListItem key={text} disablePadding>
                     <ListItemButton disabled = {index === 2? false:true} button component={Link} to={"../"+text.toLowerCase()}> 
                     <ListItemIcon style={{ color: 'white' }}>
                         {index === 0 ? <HelpOutlineOutlinedIcon /> : 
@@ -96,7 +100,7 @@ export const SideNav = (props) => {
                 </ListItem>
                 ))}
             </List>
-            </div>
+          </div>
         </Drawer>
       </Box>
     </Box>

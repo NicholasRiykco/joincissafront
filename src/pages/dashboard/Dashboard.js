@@ -12,7 +12,6 @@ import CardMedia from '@mui/material/CardMedia';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import Grid from '@mui/material/Grid';
 
-import TextEditor from '../../components/textEditorComponents/components/QuillTextEditor';
 
 
 import {SideNav} from '../../components/sideNav/SideNav';
@@ -49,7 +48,7 @@ export default function Dashboard() {
         >
           <Toolbar>
             <Typography variant="h6" noWrap component="div" style={{ color: '#000000' }}>
-              Insert Searchbar here
+              Dashboard
             </Typography>
           </Toolbar>
         </AppBar>
@@ -68,20 +67,20 @@ export default function Dashboard() {
           <Grid container spacing={2} direction="row" alignItems="center" >
           {['Optiver', 'IMC Trading', 'Atlassian', 'Citadel', 'REA Group', 'ANZ', 'CommBank', 'NAB', 'Google'].map((text, index) => (
             <Grid item xs={2}> 
-              <Card sx={{ maxWidth: "250px" }}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image={Logo}
-                    alt="document logo"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h6" component="div">
-                      {text}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
+               <Card sx={{ maxWidth: 345 }}>
+                <CardMedia
+                  sx={{ height: 140 }}
+                  image={Logo}
+                  title="document"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h7" component="div">
+                    {text}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small">Edit</Button>
+                </CardActions>
               </Card>
             </Grid>
           ))}

@@ -246,15 +246,15 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  border: 1px solid green;
+  border: 1px transparent;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: green;
+  background: #a7b1c2;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: green;
+  background: #848d9c;
 }
