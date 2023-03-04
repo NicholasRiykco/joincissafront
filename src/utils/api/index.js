@@ -7,7 +7,9 @@ export async function postReview(params) {
   const dataFetched = await axios({
     url: endpoint,
     method: 'POST',
-    data: params,
+    data: {
+        body: params
+    },
     headers: {
       'Content-Type': 'application/json',
     },

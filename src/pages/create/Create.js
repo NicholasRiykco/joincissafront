@@ -105,8 +105,7 @@ export const Create = (props) => {
                 Review
               </Button>
                 { showResults ? 
-                <Typography gutterBottom variant="body2" component="div">
-                  Your score is:
+                <Typography gutterBottom variant="body2" component="div" padding="30px">
                   {reviewResults}
                 </Typography> : 
                 <></>
