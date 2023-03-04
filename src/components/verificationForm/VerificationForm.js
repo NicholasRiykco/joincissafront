@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
 
-import "./styles.css";
+import "../formContainer/styles.css";
 import "../../index.css";
 import { baseDevelopmentURL } from "../../utils/constants";
 
@@ -55,13 +55,13 @@ export const VerificationForm = (props) => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <div className="mv3">
-        <label className="black">Code</label>
+        <label className="login-signup-label">Code</label>
         <input
           type="text"
           name="code"
           value={formik.values.code}
           onChange={formik.handleChange}
-          placeholder="code"
+          placeholder="Enter code"
           className="input-box-container input-reset"
         />
         {formik.errors.code && formik.touched.code && (
@@ -71,10 +71,15 @@ export const VerificationForm = (props) => {
         {success && <p className="input-success">{successMessage}</p>}
       </div>
       <div>
-        <button type="submit" id="login" className="solid-buttton">
+        <button type="submit" id="login" className="solid-button">
           Submit
         </button>
       </div>
+      <div className="form-footer">
+          <Link to={'/login'} className="details-footer">
+            Back to sign-in
+          </Link>
+        </div>
     </form>
   );
 };

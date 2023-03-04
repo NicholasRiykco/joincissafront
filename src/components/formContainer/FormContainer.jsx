@@ -27,6 +27,8 @@ export const FormContainer = ({type, title}) => {
           </div>
         </main>
       </div>
+      <img id="blob1" src="../../images/Vector 7.png"/>
+      <img id="blob2" src="../../images/Vector 8.png"/>
     </div>
 
     );
