@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from "react-router-dom";
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
@@ -9,7 +10,6 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
@@ -53,9 +53,10 @@ export const SideNav = (props) => {
             <List>
                 {['Dashboard', 'Trash'].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                    <ListItemButton>
+                    <ListItemButton button component={Link} to={"../"+text.toLowerCase()}>
                     <ListItemIcon>
-                        {index % 2 === 0 ? <HomeOutlinedIcon style={{ color: 'white' }} /> : <DeleteOutlineOutlinedIcon style={{ color: 'white' }} />}
+                        {index % 2 === 0 ? <HomeOutlinedIcon style={{ color: 'white' }} /> : 
+                        <DeleteOutlineOutlinedIcon style={{ color: 'white' }} />}
                     </ListItemIcon>
                     <ListItemText primary={text} style={{ color: 'white' }}/>
                     </ListItemButton>
@@ -65,8 +66,8 @@ export const SideNav = (props) => {
             <Divider />
             <List>
                 {['Analytics', 'Schedules', 'Style Guides', 'Premium'].map((text, index) => (
-                <ListItem key={text} disablePadding>
-                    <ListItemButton disabled = {true}> 
+                <ListItem key={text} disablePadding >
+                    <ListItemButton disabled = {true} button component={Link} to={"../"+text.toLowerCase()}> 
                     <ListItemIcon style={{ color: 'white' }}>
                         {index === 0 ? <ShowChartOutlinedIcon /> : 
                         index === 1 ? <CalendarMonthOutlinedIcon /> :
@@ -81,7 +82,7 @@ export const SideNav = (props) => {
             <List style={{ position: "absolute", bottom: 0}}>
                 {['Help', 'Settings', 'Logout'].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                    <ListItemButton disabled = {index === 2? false:true}> 
+                    <ListItemButton disabled = {index === 2? false:true} button component={Link} to={"../"+text.toLowerCase()}> 
                     <ListItemIcon style={{ color: 'white' }}>
                         {index === 0 ? <HelpOutlineOutlinedIcon /> : 
                         index === 1 ? <SettingsOutlinedIcon /> :
