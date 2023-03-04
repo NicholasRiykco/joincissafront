@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-import './styles.css';
+import '../formContainer/styles.css';
 import '../../index.css';
 import { baseDevelopmentURL, SIGNUP } from '../../utils/constants';
 
@@ -84,7 +84,7 @@ export const SignupForm = (props) => {
   return (
     <form onBlur={formik.handleBlur} onSubmit={formik.handleSubmit}>
       <div className="mt3">
-        <label className="black">First Name</label>
+        <label className="login-signup-label">First Name</label>
         <input
           type="text"
           name="firstName"
@@ -98,7 +98,7 @@ export const SignupForm = (props) => {
         )}
       </div>
       <div className="mt3">
-        <label className="black">Last Name</label>
+        <label className="login-signup-label">Last Name</label>
         <input
           type="text"
           name="lastName"
@@ -113,7 +113,7 @@ export const SignupForm = (props) => {
       </div>
 
       <div className="mt3">
-        <label className="black">Email</label>
+        <label className="login-signup-label">Email</label>
         <input
           type="text"
           name="email"
@@ -127,7 +127,7 @@ export const SignupForm = (props) => {
         )}
       </div>
       <div className="mt3">
-        <label className="black">Password</label>
+        <label className="login-signup-label">Password</label>
         <input
           type="password"
           name="password"
@@ -140,29 +140,15 @@ export const SignupForm = (props) => {
           <p className="input-error">{formik.errors.password}</p>
         )}
       </div>
-      <div className="mv3">
-        <label className="black">Confirm Password</label>
-        <input
-          type="password"
-          name="confirmPassword"
-          value={formik.values.confirmPassword}
-          onChange={formik.handleChange}
-          className="input-box-container input-reset"
-          placeholder="Confirm Password"
-        />
-        {formik.errors.confirmPassword && formik.touched.confirmPassword && (
-          <p className="input-error">{formik.errors.confirmPassword}</p>
-        )}
-      </div>
-      {error && <p className="input-error">{errorMessage}</p>}
       <div>
-        <button type="submit" id="signup" className="solid-buttton">
+        <button type="submit" id="signup" className="solid-button">
           Sign Up
         </button>
         <br />
-        <div className="lh-copy mt3">
-          <Link to={'/login'} id="login" className="details-footer">
-            Already have an account?
+        <div className="form-footer">
+          Already a member?
+          <Link to={'/login'} className="details-footer">
+            Sign in to your account
           </Link>
         </div>
       </div>

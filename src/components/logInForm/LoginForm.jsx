@@ -7,8 +7,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import cookie from 'react-cookies';
 
-import './styles.css';
-import '../../index.css';
+import '../formContainer/styles.css';
 import { baseDevelopmentURL, LOGIN } from '../../utils/constants';
 // import { Header } from '../../components/Header';
 
@@ -76,7 +75,7 @@ export const LoginForm = (props) => {
   return (
     <form onBlur={formik.handleBlur} onSubmit={formik.handleSubmit}>
       <div className="mt3">
-        <label className="black">Email</label>
+        <label className="login-signup-label">Email</label>
         <input
           type="text"
           name="email"
@@ -90,7 +89,7 @@ export const LoginForm = (props) => {
         )}
       </div>
       <div className="mv3">
-        <label className="black">Password</label>
+        <label className="login-signup-label">Password</label>
         <input
           type="password"
           name="password"
@@ -105,13 +104,20 @@ export const LoginForm = (props) => {
         {error && <p className="input-error">{errorMessage}</p>}
       </div>
       <div>
-        <button type="submit" id="login" className="solid-buttton">
+        <div>
+          <Link to={'/password/start/reset'} className="forgot-password">
+            Forgot your password?
+          </Link>
+        </div>
+        <br />
+        <button type="submit" id="login" className="solid-button">
           Log In
         </button>
         <br />
-        <div className="lh-copy mt3">
-          <Link to={'/password/start/reset'} className="details-footer">
-            Forgot your password?
+        <div className="form-footer">
+          Don't have an account?
+          <Link to={'/signup'} className="details-footer">
+            Click to sign up
           </Link>
         </div>
       </div>
