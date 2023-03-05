@@ -6,7 +6,7 @@ import './welcome.css';
 import DiamondIcon from '@mui/icons-material/Diamond';
 import Rocket from '../../images/Group 8.png';
 import Blur from '../../images/Group 9.png';
-import Background from '../../images/Background.png';
+// import Background from '../../images/Background.png';
 import Charlie from '../../images/charlie.jpeg';
 import James from '../../images/james.jpeg';
 import Kelsey from '../../images/kelsey.jpeg';
@@ -40,7 +40,6 @@ export const Welcome = (props) => {
                 <p>DiverseAI enables employers and recruiters to confidently communicate their commitment to inclusivity in job postings, and attract diverse and highly qualified candidates.</p>
             </div>
         </div>
-        <img id='background' src={Background}/>
         <div className='Features'>
             <div className='header'>
                 <h4>Our Features</h4>

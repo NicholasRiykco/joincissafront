@@ -14,7 +14,7 @@ const Link = ({ attributes, element, children}) => {
             {selected && focused && (
                 <div className='link-popup' contentEditable={false}>
                     <a href={element.href} target={element.target}>{element.href}</a>
-                    <button onClick={()=>removeLink(editor)}><img src={unlink} alt="" /></button>
+                    <button onClick={()=>removeLink(editor)}><img src={unlink} id="link-button" /></button>
                 </div>
             )}
         </div>

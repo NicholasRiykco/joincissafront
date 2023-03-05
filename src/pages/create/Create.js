@@ -48,31 +48,28 @@ export const Create = (props) => {
       console.log("Review Results: ", reviewResults);
     });
   };
-
-  return (
-    <div>
-      <Box sx={{ display: "flex" }}>
-        <CssBaseline />
-        <AppBar
-          position="fixed"
-          sx={{
-            width: { sm: `calc(100% - ${drawerWidth}px)` },
-            ml: { sm: `${drawerWidth}px` },
-          }}
-          style={{ background: "white" }}
-        >
-          <Toolbar>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              style={{ color: "#000000" }}
-            >
-              Create
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <Box
+    return (
+        <div>
+        <Box sx={{ display: 'flex' }}>
+          <CssBaseline />
+          <AppBar
+            position="fixed"
+            elevation={0}
+            sx={{
+              width: { sm: `calc(100% - ${drawerWidth}px)` },
+              ml: { sm: `${drawerWidth}px` },
+              borderBottom: 1,
+              borderColor: '#E5E7EB'
+            }}
+            style={{ background: 'white' }}
+          >
+            <Toolbar>
+              <Typography variant="h6" noWrap component="div" style={{ color: '#636161' }}>
+                Untitled Document
+              </Typography>
+            </Toolbar>
+          </AppBar>
+          <Box
           component="nav"
           sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
           aria-label="mailbox folders"
