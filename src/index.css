@@ -3,7 +3,7 @@
 
 html,
 body {
-  background-color: white;
+  background-color: #ffffff !important;
 }
 
 #logo-landing {
@@ -90,4 +90,23 @@ body {
   .details-container {
     width: 25%;
   }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a7b1c2;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #848d9c;
 }
