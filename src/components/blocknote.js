@@ -4,7 +4,7 @@ import "@blocknote/core/style.css";
 function Editor() {
   const editor = useBlockNote({
     onUpdate: ({ editor }) => {
-      // Log the document to console on every update
+      // Log the document to console on every updated
       console.log(editor.getJSON());
     },
   });
