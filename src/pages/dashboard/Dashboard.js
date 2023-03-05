@@ -14,8 +14,7 @@ import Grid from "@mui/material/Grid";
 import { SideNav } from "../../components/sideNav/SideNav";
 import Logo from "../../images/test.jpg";
 import { useNavigate } from "react-router-dom";
-import DocImage from '../../images/Group 10.png';
-
+import DocImage from "../../images/Group 10.png";
 
 const drawerWidth = 240;
 
@@ -45,7 +44,7 @@ export default function Dashboard() {
             width: { sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
             borderBottom: 1,
-            borderColor: '#E5E7EB'
+            borderColor: "#E5E7EB",
           }}
           style={{ background: "white" }}
         >
@@ -77,28 +76,40 @@ export default function Dashboard() {
         >
           <Toolbar />
 
-          <Grid container spacing={4} direction="row" alignItems="center" >
-          {['Solutions Architect (Consulting)', 'CISSA Graduate Program 2024', 'Technology Sales Specialist', 'Customer Success Manager', 'Project Manager (Melbourne)', 'Data Analyst (Brisbane)', 'Data Strategy Manager', 'Enterprise Security Architect'].map((text, index) => (
-            <Grid item xs={3}> 
-               <Card sx={{ maxWidth: 345 }} onClick={() => {
+          <Grid container spacing={4} direction="row" alignItems="center">
+            {[
+              "Solutions Architect (Consulting)",
+              "CISSA Graduate Program 2024",
+              "Technology Sales Specialist",
+              "Customer Success Manager",
+              "Project Manager (Melbourne)",
+              "Data Analyst (Brisbane)",
+              "Data Strategy Manager",
+              "Enterprise Security Architect",
+            ].map((text, index) => (
+              <Grid item xs={3}>
+                <Card
+                  sx={{ maxWidth: 345 }}
+                  onClick={() => {
                     navigate("/edit", { state: { title: text } });
-                  }>
-                <CardMedia
-                  sx={{ height: 140 }}
-                  image={DocImage}
-                  title="document"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h7" component="div">
-                    {text}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small">Edit</Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
+                  }}
+                >
+                  <CardMedia
+                    sx={{ height: 140 }}
+                    image={DocImage}
+                    title="document"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h7" component="div">
+                      {text}
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small">Edit</Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
         </Box>
       </Box>
