@@ -6,12 +6,10 @@ import {  SIGNUP } from '../../utils/constants';
 
 export const Signup = (props) => {
 
-
     return (
       <div>
         <FormContainer type={SIGNUP} title={"Sign Up"}/>
       </div>
     );
-
 
 }

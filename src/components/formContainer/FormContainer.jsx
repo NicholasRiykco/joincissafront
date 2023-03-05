@@ -3,6 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { LOGIN, SIGNUP, VERIFICATION } from '../../utils/constants';
 import { LoginForm } from '../logInForm/LoginForm';
 import { SignupForm } from '../signupForm/SignupForm';
+import { VerificationForm } from '../verificationForm/VerificationForm';
+
+import blob1 from '../../images/Vector 7.png';
+import blob2 from '../../images/Vector 8.png';
+import LandingNavbar from '../landingNavbar/landing-navbar';
 
 export const FormContainer = ({type, title}) => {
   let form;
@@ -11,11 +16,13 @@ export const FormContainer = ({type, title}) => {
       form = < LoginForm />;
     } else if (type === SIGNUP) {
       form = < SignupForm />;
+    } else if (type === VERIFICATION){
+      form = < VerificationForm />;
     }
 
     return (
       <div className="body">
-      <div className="fix-padding"></div>
+      <LandingNavbar/>
       <div className="details-container">
         <main className="details-main">
           <div className="measure">
@@ -24,6 +31,8 @@ export const FormContainer = ({type, title}) => {
           </div>
         </main>
       </div>
+      <img id="blob1" src={blob1}/>
+      <img id="blob2" src={blob2}/>
     </div>
 
     );
