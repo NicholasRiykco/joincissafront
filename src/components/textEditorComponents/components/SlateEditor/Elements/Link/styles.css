@@ -15,6 +15,6 @@
   width: fit-content;
   z-index: 1;
 }
-img{
+img#link-button {
   height: 15px;
 }

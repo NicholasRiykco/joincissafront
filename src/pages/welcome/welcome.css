@@ -1,3 +1,7 @@
+div {
+    overflow: hidden;
+}
+
 nav {
     position: sticky;
 }
