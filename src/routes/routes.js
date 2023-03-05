@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 
 import { Welcome } from "../pages/welcome/Welcome";
 import { Login } from "../pages/login/Login";
@@ -14,7 +14,7 @@ import { Redirect } from "react-router-dom";
 const AppRoutes = () => (
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Welcome />} /> */
+      <Route path="/" element={<Welcome />} />
       <Route path="/login" element={<Login />} />
       {/* <Route path="/logout" element={<Welcome />} /> */}
       <Route path="/signup" element={<Signup />} />
@@ -24,7 +24,7 @@ const AppRoutes = () => (
       {/* <Route path="/dashboard" element={<Dash />} /> */}
       <Route path="/editor" element={<TextEditor />} />
       <Route path="/edit" element={<Edit />} />
-      {/* <Route path="/logout" element={<Redirect to="/" />} /> */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </BrowserRouter>
 );
