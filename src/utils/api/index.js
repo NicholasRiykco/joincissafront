@@ -1,17 +1,18 @@
-const axios = require('axios');
-const URL = 'http://localhost:3050'; 
+import { baseDevelopmentURL } from "../constants/index";
+const axios = require("axios");
+// const URL = 'http://localhost:3050';
 
 export async function postReview(params) {
-  const endpoint = URL + '/api/review';
+  const endpoint = baseDevelopmentURL + "/api/review";
   console.log(params);
   const dataFetched = await axios({
     url: endpoint,
-    method: 'POST',
+    method: "POST",
     data: {
-        body: params
+      body: params,
     },
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
   });
   console.log(dataFetched);

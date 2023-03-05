@@ -12,8 +12,9 @@ import { SideNav } from "../../components/sideNav/SideNav";
 import { useLocation } from "react-router-dom";
 import TextEditor from "../../components/textEditorComponents/components/QuillTextEditor";
 // import { postReview } from '../../utils/api';
+import { baseDevelopmentURL } from "../../utils/constants/index";
 
-const URL = "http://localhost:3050";
+const URL = baseDevelopmentURL;
 
 // export async function postReview(params) {
 //   const endpoint = URL + "/api/review";

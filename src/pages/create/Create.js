@@ -12,7 +12,7 @@ import { SideNav } from "../../components/sideNav/SideNav";
 // import { postReview } from '../../utils/api';
 import { baseDevelopmentURL } from "../../utils/constants/index";
 
-const URL = "http://localhost:3050";
+const URL = baseDevelopmentURL;
 
 export async function postReview(params) {
   // const endpoint = URL + "/api/review";
