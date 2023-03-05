@@ -1,4 +1,5 @@
-import { NavLink as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Link as ScrollLink,  animateScroll as scroll } from 'react-scroll';
 import styled from 'styled-components';
 
 import MenuIcon from '@mui/icons-material/Menu';
@@ -11,15 +12,15 @@ export const Nav = styled.nav`
   justify-content: space-between;
   padding-top: 0.5rem calc((100vw - 1000px) / 2);
   padding-bottom: 0.5rem calc((100vw - 1000px) / 2);
-  padding-left: 5em;
-  padding-right: 5em;
+  padding-left: 6em;
+  padding-right: 6em;
   margin-bottom: 2em;
   z-index: 10;
   /* Third Nav */
   /* justify-content: flex-start; */
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled(ScrollLink)`
   color: black;
   font-weight: 500;
   display: flex;

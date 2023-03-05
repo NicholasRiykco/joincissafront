@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Nav,
   NavLink,
-  Bars,
   NavMenu,
   NavBtn,
   NavBtnLink1,
@@ -15,20 +14,20 @@ const Navbar = () => {
   return (
     <>
       <Nav>
-        <NavLink to='/'>
+        <NavLink id='logo-landing' to={'/'}>
           <img src={Logo} alt='logo' />
         </NavLink>
         <NavMenu>
-          <NavLink to='/' activeStyle>
+          <NavLink to='About' smooth={true} duration={500} activeStyle>
             About
           </NavLink>
-          <NavLink to='/' activeStyle>
+          <NavLink to='Mission' smooth={true} duration={500} activeStyle>
             Our Mission
           </NavLink>
-          <NavLink to='/' activeStyle>
+          <NavLink to='Features' smooth={true} duration={500} activeStyle>
             Features
           </NavLink>
-          <NavLink to='/' activeStyle>
+          <NavLink to='Team' smooth={true} duration={500} activeStyle>
             Team
           </NavLink>
           {/* Second Nav */}
