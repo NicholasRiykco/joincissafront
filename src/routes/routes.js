@@ -5,6 +5,7 @@ import { Welcome } from "../pages/welcome/Welcome";
 import { Login } from "../pages/login/Login";
 import Dash from "../components/side-nav";
 import { Signup } from "../pages/signup/Signup";
+import QuillEditor from "../quills/components/Quills";
 import { Verify } from "../pages/verify/Verify";
 
 const AppRoutes = () => (
@@ -16,6 +17,7 @@ const AppRoutes = () => (
       <Route path="/signup" element={<Signup />} />
       <Route path="/verify" element={<Verify />} />
       <Route path="/dashboard" element={<Dash />} />
+      <Route path="/editor" element={<QuillEditor />} />
     </Routes>
   </BrowserRouter>
 );

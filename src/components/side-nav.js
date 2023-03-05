@@ -15,6 +15,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import QuillEditor from '../quills/components/Quills';
 const drawerWidth = 240;
 
 export default function Dash() {
@@ -27,7 +28,7 @@ export default function Dash() {
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            Docs
+            Write Something
           </Typography>
         </Toolbar>
       </AppBar>
@@ -76,7 +77,7 @@ export default function Dash() {
         sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
       >
         <Toolbar />
-        <Editor/>
+        <QuillEditor/>
       </Box>
     </Box>
   );
