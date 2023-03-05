@@ -1,7 +1,3 @@
-div {
-    overflow: hidden;
-}
-
 nav {
     position: sticky;
 }
@@ -21,7 +17,7 @@ nav {
 }
 
 .Features {
-    padding: 20em 7em 2em 7em;
+    padding: 0em 7em 2em 7em;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     height: fit-content;

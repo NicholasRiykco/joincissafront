@@ -60,15 +60,18 @@ export const Create = (props) => {
           <CssBaseline />
           <AppBar
             position="fixed"
+            elevation={0}
             sx={{
               width: { sm: `calc(100% - ${drawerWidth}px)` },
               ml: { sm: `${drawerWidth}px` },
+              borderBottom: 1,
+              borderColor: '#E5E7EB'
             }}
             style={{ background: 'white' }}
           >
             <Toolbar>
-              <Typography variant="h6" noWrap component="div" style={{ color: '#000000' }}>
-                Create
+              <Typography variant="h6" noWrap component="div" style={{ color: '#636161' }}>
+                Untitled Document
               </Typography>
             </Toolbar>
           </AppBar>

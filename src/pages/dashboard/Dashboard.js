@@ -15,7 +15,7 @@ import Grid from '@mui/material/Grid';
 
 
 import {SideNav} from '../../components/sideNav/SideNav';
-import Logo from '../../images/test.jpg';
+import DocImage from '../../images/Group 10.png';
 
 const drawerWidth = 240;
 
@@ -40,9 +40,12 @@ export default function Dashboard() {
         <CssBaseline />
         <AppBar
           position="fixed"
+          elevation={0}
           sx={{
             width: { sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
+            borderBottom: 1,
+            borderColor: '#E5E7EB'
           }}
           style={{ background: 'white' }}
         >
@@ -64,13 +67,13 @@ export default function Dashboard() {
           sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
         >
           <Toolbar />
-          <Grid container spacing={2} direction="row" alignItems="center" >
-          {['Optiver', 'IMC Trading', 'Atlassian', 'Citadel', 'REA Group', 'ANZ', 'CommBank', 'NAB', 'Google'].map((text, index) => (
-            <Grid item xs={2}> 
+          <Grid container spacing={4} direction="row" alignItems="center" >
+          {['Solutions Architect (Consulting)', 'CISSA Graduate Program 2024', 'Technology Sales Specialist', 'Customer Success Manager', 'Project Manager (Melbourne)', 'Data Analyst (Brisbane)', 'Data Strategy Manager', 'Enterprise Security Architect'].map((text, index) => (
+            <Grid item xs={3}> 
                <Card sx={{ maxWidth: 345 }}>
                 <CardMedia
                   sx={{ height: 140 }}
-                  image={Logo}
+                  image={DocImage}
                   title="document"
                 />
                 <CardContent>
