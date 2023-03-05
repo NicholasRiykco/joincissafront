@@ -1,37 +1,36 @@
-import * as React from 'react';
+import * as React from "react";
 import { Link } from "react-router-dom";
-import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import Logo from '../../images/Logo.png';
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import Logo from "../../images/Logo.png";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
 
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Toolbar from '@mui/material/Toolbar';
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Toolbar from "@mui/material/Toolbar";
 
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-import ControlPointIcon from '@mui/icons-material/ControlPoint';
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import ControlPointIcon from "@mui/icons-material/ControlPoint";
 
-import ShowChartOutlinedIcon from '@mui/icons-material/ShowChartOutlined';
-import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
-import StyleOutlinedIcon from '@mui/icons-material/StyleOutlined';
-import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
+import ShowChartOutlinedIcon from "@mui/icons-material/ShowChartOutlined";
+import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
+import StyleOutlinedIcon from "@mui/icons-material/StyleOutlined";
+import WorkspacePremiumOutlinedIcon from "@mui/icons-material/WorkspacePremiumOutlined";
 
-import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
-import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
-
+import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import TextEditor from "../textEditorComponents/components/QuillTextEditor";
 const drawerWidth = 240;
 
 export const SideNav = (props) => {
-
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <Box
         component="nav"
@@ -41,69 +40,100 @@ export const SideNav = (props) => {
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            display: { xs: "none", sm: "block" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
           }}
           PaperProps={{
             sx: {
               backgroundColor: "#103C85",
-            }
+            },
           }}
           open
         >
           <div>
             <Toolbar>
-                <img src={Logo} alt="logo" width="140"/>  
-            </Toolbar>  
-            <Divider />   
+              <img src={Logo} alt="logo" width="140" />
+            </Toolbar>
+            <Divider />
             <List>
-                {['Dashboard', 'Create'].map((text, index) => (
+              {["Dashboard", "Create"].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                    <ListItemButton button component={Link} to={"../"+text.toLowerCase()}>
+                  <ListItemButton
+                    button
+                    component={Link}
+                    to={"../" + text.toLowerCase()}
+                  >
                     <ListItemIcon>
-                        {index % 2 === 0 ? <HomeOutlinedIcon style={{ color: 'white' }} /> : 
-                        <ControlPointIcon style={{ color: 'white' }} />}
+                      {index % 2 === 0 ? (
+                        <HomeOutlinedIcon style={{ color: "white" }} />
+                      ) : (
+                        <ControlPointIcon style={{ color: "white" }} />
+                      )}
                     </ListItemIcon>
-                    <ListItemText primary={text} style={{ color: 'white' }}/>
-                    </ListItemButton>
+                    <ListItemText primary={text} style={{ color: "white" }} />
+                  </ListItemButton>
                 </ListItem>
-                ))}
+              ))}
             </List>
             <Divider />
             <List>
-                {['Analytics', 'Schedules', 'Style Guides', 'Premium'].map((text, index) => (
-                <ListItem key={text} disablePadding>
-                    <ListItemButton disabled = {true} button component={Link} to={"../"+text.toLowerCase()}> 
-                    <ListItemIcon style={{ color: 'white' }}>
-                        {index === 0 ? <ShowChartOutlinedIcon /> : 
-                        index === 1 ? <CalendarMonthOutlinedIcon /> :
-                        index === 2 ? <StyleOutlinedIcon />: 
-                        <WorkspacePremiumOutlinedIcon />}
-                    </ListItemIcon>
-                    <ListItemText primary={text} style={{ color: 'white' }} />
+              {["Analytics", "Schedules", "Style Guides", "Premium"].map(
+                (text, index) => (
+                  <ListItem key={text} disablePadding>
+                    <ListItemButton
+                      disabled={true}
+                      button
+                      component={Link}
+                      to={"../" + text.toLowerCase()}
+                    >
+                      <ListItemIcon style={{ color: "white" }}>
+                        {index === 0 ? (
+                          <ShowChartOutlinedIcon />
+                        ) : index === 1 ? (
+                          <CalendarMonthOutlinedIcon />
+                        ) : index === 2 ? (
+                          <StyleOutlinedIcon />
+                        ) : (
+                          <WorkspacePremiumOutlinedIcon />
+                        )}
+                      </ListItemIcon>
+                      <ListItemText primary={text} style={{ color: "white" }} />
                     </ListItemButton>
-                </ListItem>
-                ))}
+                  </ListItem>
+                )
+              )}
             </List>
             <Divider />
-            <List style={{ position: "absolute", bottom: 0}}>
-                {['Help', 'Settings', 'Logout'].map((text, index) => (
+            <List style={{ position: "absolute", bottom: 0 }}>
+              {["Help", "Settings", "Logout"].map((text, index) => (
                 <ListItem key={text} disablePadding>
-                    <ListItemButton disabled = {index === 2? false:true} button component={Link} to={"../"+text.toLowerCase()}> 
-                    <ListItemIcon style={{ color: 'white' }}>
-                        {index === 0 ? <HelpOutlineOutlinedIcon /> : 
-                        index === 1 ? <SettingsOutlinedIcon /> :
-                        <LogoutOutlinedIcon />}
+                  <ListItemButton
+                    disabled={index === 2 ? false : true}
+                    button
+                    component={Link}
+                    to={"../" + text.toLowerCase()}
+                  >
+                    <ListItemIcon style={{ color: "white" }}>
+                      {index === 0 ? (
+                        <HelpOutlineOutlinedIcon />
+                      ) : index === 1 ? (
+                        <SettingsOutlinedIcon />
+                      ) : (
+                        <LogoutOutlinedIcon />
+                      )}
                     </ListItemIcon>
-                    <ListItemText primary={text} style={{ color: 'white' }} />
-                    </ListItemButton>
+                    <ListItemText primary={text} style={{ color: "white" }} />
+                  </ListItemButton>
                 </ListItem>
-                ))}
+              ))}
             </List>
           </div>
         </Drawer>
+        <TextEditor></TextEditor>
       </Box>
     </Box>
   );
 };
-

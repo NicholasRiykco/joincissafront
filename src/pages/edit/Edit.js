@@ -9,28 +9,30 @@ import Button from "@mui/material/Button";
 import axios from "axios";
 
 import { SideNav } from "../../components/sideNav/SideNav";
+import { useLocation } from "react-router-dom";
+import TextEditor from "../../components/textEditorComponents/components/QuillTextEditor";
 // import { postReview } from '../../utils/api';
 
 const URL = "http://localhost:3050";
 
-export async function postReview(params) {
-  const endpoint = URL + "/api/review";
-  console.log(params);
-  const dataFetched = await axios({
-    url: endpoint,
-    method: "POST",
-    data: params,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  console.log(dataFetched.data);
-  return dataFetched.data;
-}
+// export async function postReview(params) {
+//   const endpoint = URL + "/api/review";
+//   console.log(params);
+//   const dataFetched = await axios({
+//     url: endpoint,
+//     method: "POST",
+//     data: params,
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//   });
+//   console.log(dataFetched.data);
+//   return dataFetched.data;
+// }
 
 const drawerWidth = 240;
 
-export const Create = (props) => {
+export const Edit = (props) => {
   let query = "";
   const [reviewQuery, setReviewQuery] = useState("");
   const [reviewResults, setReviewResults] = useState(null);
@@ -41,13 +43,16 @@ export const Create = (props) => {
     setReviewQuery(e.target.value);
   };
 
-  const handleReview = async (e) => {
-    query = reviewQuery;
-    postReview(query).then((r) => {
-      setReviewResults(r.data);
-      console.log("Review Results: ", reviewResults);
-    });
-  };
+  // const handleReview = async (e) => {
+  //   query = reviewQuery;
+  //   postReview(query).then((r) => {
+  //     setReviewResults(r.data);
+  //     console.log("Review Results: ", reviewResults);
+  //   });
+  // };
+  const { state } = useLocation();
+  // const title = props?.state?.title;
+  console.log(state?.title);
 
   return (
     <div>
@@ -68,7 +73,7 @@ export const Create = (props) => {
               component="div"
               style={{ color: "#000000" }}
             >
-              Create
+              {state?.title}
             </Typography>
           </Toolbar>
         </AppBar>
@@ -89,39 +94,7 @@ export const Create = (props) => {
           }}
         >
           <Toolbar />
-          <TextField
-            placeholder="Please enter your job listing here..."
-            multiline
-            rows={20}
-            maxRows={Infinity}
-            fullWidth
-            onSelect={handleInput}
-          />
-          <Box textAlign="center" padding="30px" position="relative">
-            <Button
-              disabled={false}
-              size="large"
-              variant="contained"
-              onClick={() => {
-                handleReview();
-                setShowResults(true);
-              }}
-            >
-              Review
-            </Button>
-            {showResults ? (
-              <Typography
-                gutterBottom
-                variant="body2"
-                component="div"
-                padding="30px"
-              >
-                {reviewResults}
-              </Typography>
-            ) : (
-              <></>
-            )}
-          </Box>
+          <TextEditor></TextEditor>
         </Box>
       </Box>
     </div>
