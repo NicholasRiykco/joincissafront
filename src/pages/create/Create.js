@@ -10,20 +10,28 @@ import axios from "axios";
 
 import { SideNav } from "../../components/sideNav/SideNav";
 // import { postReview } from '../../utils/api';
+import { baseDevelopmentURL } from "../../utils/constants/index";
 
 const URL = "http://localhost:3050";
 
 export async function postReview(params) {
-  const endpoint = URL + "/api/review";
+  // const endpoint = URL + "/api/review";
   console.log(params);
-  const dataFetched = await axios({
-    url: endpoint,
-    method: "POST",
-    data: params,
-    headers: {
-      "Content-Type": "application/json",
+  // const dataFetched = await axios({
+  //   url: endpoint,
+  //   method: "POST",
+  //   data: params,
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  // });
+  axios.defaults.withCredentials = true;
+  const dataFetched = await axios.post(`${baseDevelopmentURL}/review`, {
+    data: {
+      params,
     },
   });
+
   console.log(dataFetched.data);
   return dataFetched.data;
 }
@@ -48,28 +56,33 @@ export const Create = (props) => {
       console.log("Review Results: ", reviewResults);
     });
   };
-    return (
-        <div>
-        <Box sx={{ display: 'flex' }}>
-          <CssBaseline />
-          <AppBar
-            position="fixed"
-            elevation={0}
-            sx={{
-              width: { sm: `calc(100% - ${drawerWidth}px)` },
-              ml: { sm: `${drawerWidth}px` },
-              borderBottom: 1,
-              borderColor: '#E5E7EB'
-            }}
-            style={{ background: 'white' }}
-          >
-            <Toolbar>
-              <Typography variant="h6" noWrap component="div" style={{ color: '#636161' }}>
-                Untitled Document
-              </Typography>
-            </Toolbar>
-          </AppBar>
-          <Box
+  return (
+    <div>
+      <Box sx={{ display: "flex" }}>
+        <CssBaseline />
+        <AppBar
+          position="fixed"
+          elevation={0}
+          sx={{
+            width: { sm: `calc(100% - ${drawerWidth}px)` },
+            ml: { sm: `${drawerWidth}px` },
+            borderBottom: 1,
+            borderColor: "#E5E7EB",
+          }}
+          style={{ background: "white" }}
+        >
+          <Toolbar>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              style={{ color: "#636161" }}
+            >
+              Untitled Document
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Box
           component="nav"
           sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
           aria-label="mailbox folders"
