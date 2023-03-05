@@ -18,6 +18,7 @@ const renderOptions = (formatData)=>{
 }
 const renderSingle = (formatData)=>{
     const {className,value} = formatData;
+    console.log(formatData)
     return (
         <button className = {className} value = {value}></button>
     )
