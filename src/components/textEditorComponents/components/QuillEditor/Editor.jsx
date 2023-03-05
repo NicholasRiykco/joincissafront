@@ -15,6 +15,7 @@ const Editor=()=> {
     
     const handleChange= (html)=> {
         setText(html);
+        console.log("WTDSFYIDFAHDfhiuisuhdf")
     }
     const modules = {
         toolbar: {
@@ -31,6 +32,7 @@ const Editor=()=> {
       'direction','align',
       'link','image','video','formula',
     ]
+    console.log(text)
     
     return (
       <>

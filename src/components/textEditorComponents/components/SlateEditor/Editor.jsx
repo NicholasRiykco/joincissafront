@@ -14,6 +14,10 @@ import Image from './Elements/Image/Image'
 import Video from './Elements/Video/Video'
 import Equation from './Elements/Equation/Equation'
 import { InlineMath, BlockMath } from 'react-katex';
+import { Button } from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Textarea from '@mui/joy/Textarea';
 
 const Element = (props) =>{
 
@@ -61,8 +65,8 @@ const Element = (props) =>{
             return <div {...element.attr} {...attributes}>{children}</div>
     }
 }
+
 const Leaf = ({ attributes, children, leaf }) => {
-    
     if (leaf.bold) {
       children = <strong>{children}</strong>
     }
@@ -100,17 +104,21 @@ const Leaf = ({ attributes, children, leaf }) => {
         const family = fontFamilyMap[leaf.fontFamily]
         children = <span style={{fontFamily:family}}>{children}</span>
     }
+    
+    //console.log("children",children);
+
     return <span {...attributes}>{children}</span>
 }
 const SlateEditor = ()=>{
     const editor = useMemo(() => withEquation(withHistory(withEmbeds(withTables(withLinks(withReact(createEditor())))))), []);
-    
     const [value,setValue] = useState([
         {
             type:'paragaph',
-            children:[{text:'First line of text in Slate JS. '}],
+            children:[{text:'Write Something Down'}],
         },
     ]);
+
+    const [text, setText] = useState("");
 
 
     const renderElement = useCallback(props => <Element {...props}/>,[])
@@ -120,8 +128,19 @@ const SlateEditor = ()=>{
     }, [])
 
     
+    
     return (
-            <Slate editor = {editor} value = {value} onChange = {newValue => setValue(newValue)} >
+            <Slate editor={editor} value={value} onChange={newValue => {
+                setValue(newValue);
+                console.log(newValue);
+                var res = "";
+                for (let i = 0; i < newValue.length; i++) {
+                    console.log(newValue[i].children[0].text)
+                    res = res + newValue[i].children[0].text + "\n"
+                    // console.log(newValue[i].children[0]);
+                }
+                setText(res);
+            }}>
                 <Toolbar />
                 <div className="editor-wrapper" style={{border:'1px solid #f3f3f3',padding:'0 10px'}}>
                     <Editable
@@ -130,9 +149,25 @@ const SlateEditor = ()=>{
                         renderLeaf={renderLeaf}
                     />
                 </div>
-        </Slate>
+                <Box sx={{ mx: 'auto', width: 200, paddingTop: 5}}>
+                    <Button variant="contained" size="large"  onClick={() => {
+                    console.log(text)
+                }}>
+                    Generate
+                    </Button>
+                </Box>
+                
+                <Box sx={{ p: 2 }}>
+                    <Textarea
+                        placeholder="Type in here…"
+                        defaultValue="Feedback output."
+                        minRows={2}
+                        maxRows={8}
+                    />
+                </Box>
+            </Slate>
         
     )
 }
 
-export default SlateEditor
+export default SlateEditor;
