@@ -1,94 +1,20 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
-/* @font-face {
-  font-family: 'Poppins';
-  src: local('Poppins'), url(./fonts/Poppins/Poppins-Regular.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'PoppinsBlack';
-  src: local('Poppins'), url(./fonts/Poppins/Poppins-Black.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'PoppinsBold';
-  src: local('Poppins'), url(./fonts/Poppins/Poppins-Bold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'PoppinsSemiBold';
-  src: local('Poppins'), url(./fonts/Poppins/Poppins-SemiBold.ttf) format('truetype');
-} */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html,
 body {
-  background-color: #d9f0da !important;
+  background-color: white;
 }
 
-
+#logo-landing {
+  padding-left: 1em;
+}
 
 .content {
   width: 80%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-.font-regular {
-  font-family: 'Poppins';
-}
-
-.font-bold {
-  font-family: 'PoppinsBold';
-}
-
-.font-semi-bold {
-  font-family: 'PoppinsSemiBold';
-}
-
-.font-black {
-  font-family: 'PoppinsBlack';
-}
-
-.solid-buttton {
-  font-size: 1rem;
-  text-decoration: none;
-  transition: color 0.15s ease-in;
-  opacity: 1;
-  transition: opacity 0.15s ease-in;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
-  display: inline-block;
-  color: white;
-  border-radius: 0.5rem;
-  font-family: 'PoppinsBlack';
-}
-
-#login.solid-buttton {
-  background-color: #137752;
-}
-
-#signup.solid-buttton {
-  background-color: #d1bf1c;
 }
 
 .solid-buttton:hover,
@@ -134,77 +60,9 @@ code {
   text-transform: none;
 }
 
-.details-container {
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.5rem;
-  background-color: white;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  width: 100%;
-  max-width: 32rem;
-  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
-  margin-right: auto;
-  margin-left: auto;
-  font-family: 'Poppins';
-}
-
-.details-main {
-  padding: 2rem;
-}
-
-.measure {
-  max-width: 30em;
-}
-
-.details-title {
-  font-size: 3rem;
-  font-weight: 600;
-  /*Replace it with poppins bold or whatever*/
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 0;
-  margin-right: 0;
-  color: black;
-  text-align: center;
-}
-
-.mt3 {
-  margin-top: 1rem;
-}
-
 .mv3 {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-}
-
-.black {
-  color: black;
-}
-
-.lh-copy {
-  line-height: 1.5;
-}
-
-.input-box-container {
-  padding: 0.5rem;
-  border-style: solid;
-  border-width: 1px;
-  border-width: 0.125rem;
-  width: 100%;
-  border-radius: 0.5rem;
-  background-color: transparent;
-}
-
-.details-footer {
-  font-size: 0.875rem;
-  text-decoration: none;
-  transition: color 0.15s ease-in;
-  color: black;
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  font-family: 'Poppins';
 }
 
 .table-responsive {
@@ -215,12 +73,6 @@ code {
 
 .table-responsive thead {
   font-family: PoppinsBold;
-}
-
-/* form control resets to remove default styles for mobile devices */
-.input-reset {
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
 .input-reset::-moz-focus-inner {
@@ -238,23 +90,4 @@ code {
   .details-container {
     width: 25%;
   }
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-track {
-  border: 1px solid green;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: green;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: green;
 }

@@ -1,0 +1,171 @@
+nav {
+    position: sticky;
+}
+
+.About, .Mission {
+    padding-left: 7em;
+    padding-right: 7em;
+    box-sizing: border-box;
+    column-count: 2;
+    font-family: 'Montserrat', sans-serif;
+    height: fit-content;
+    position: relative;
+}
+
+.About {
+    padding-bottom: 2em;
+}
+
+.Features {
+    padding: 20em 7em 2em 7em;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    height: fit-content;
+    position: relative;
+}
+
+.Team {
+    padding: 2em 7em 2em 7em;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    height: fit-content;
+    position: relative;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 70px;
+    margin-bottom: 40px;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 28px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 40px;
+}
+
+.column1, .column2 {
+    box-sizing: border-box;
+}
+
+.About .column1 {
+    margin-top: 12em;
+}
+
+.landing-button {
+    background: #3B82F6;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    border: none;
+    padding: 14px 16px;
+    font-weight: 500;
+    font-size: 17px;    
+    padding: 14px 20px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.landing-button:hover {
+    background: #3677E1;
+    cursor: pointer;
+}
+  
+.landing-button:after {
+    background: #3677E1;
+    cursor: pointer;
+}
+
+.landing-button a {
+    text-decoration: none;
+    color: white;
+}
+
+img#blur-landing {
+    left: -8em;
+    position: relative;
+    z-index: 0;
+}
+
+.Mission .column2 {
+    text-align: right;
+}
+
+img#background {
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.header h4 {
+    color: #3B82F6;
+    font-weight: 500;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2em 5em;
+}
+
+.premium {
+    background: #F3BF42;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #662500;
+}
+
+.premium svg {
+    vertical-align: text-bottom;
+    margin-left: 5px;
+}
+
+.team-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.team-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.team-label {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.Team h2 {
+    margin-bottom: 80px;
+}

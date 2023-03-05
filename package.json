@@ -35,6 +35,7 @@
     "slate": "^0.91.4",
     "slate-history": "^0.86.0",
     "slate-react": "^0.91.8",
+
     "styled-components": "^5.3.8",
     "web-vitals": "^2.1.4",
     "yup": "^1.0.2"

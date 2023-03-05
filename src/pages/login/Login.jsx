@@ -9,7 +9,7 @@ export const Login = (props) => {
 
     return (
       <div>
-        <FormContainer type={LOGIN} title={"Login"}/>
+        <FormContainer type={LOGIN} title={"Log In"}/>
       </div>
     );
 
