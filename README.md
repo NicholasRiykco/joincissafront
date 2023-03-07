@@ -42,6 +42,7 @@ This section lists any major frameworks/libraries used to bootstrap this project
 - [Figma Prototype](https://www.figma.com/proto/FP36MPXtC0Oci0vourXBC2/UNIHACK%3A-Prototype?page-id=0%3A1&node-id=301%3A44324&viewport=641%2C3128%2C0.52&scaling=min-zoom&starting-point-node-id=307%3A54554)
 - [Pitch Video](https://youtu.be/NhgJtjCYR6M)
 - [UNIHack23 Devpost Submission](https://devpost.com/software/diverseai)
+- [Backend Repository](https://github.com/KaiyiSun/JoinCISSA-backend)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
